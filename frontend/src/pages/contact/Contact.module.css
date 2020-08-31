@@ -1,0 +1,44 @@
+.image{
+    height: 30vh;
+    width: 100%;
+    border-radius: 10px;
+}
+.heading{
+    font-size: 24px;
+    color: black;
+    padding: 0% 5%;
+    margin-top: 5%;
+}
+
+.hr1{
+    background-color:  black;
+    margin: 0% 5%;
+}
+
+.adress{
+    margin-top: 0.5em;
+    padding: 0% 5%;
+    display: grid;
+}
+.form{
+    margin: 0% 5%;
+
+}
+
+.textfield{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: solid;
+    border-color: #DDDDDD;
+    margin-left: 0.5em;
+    margin-bottom: 3em;
+}
+.textarea{
+    resize: vertical;
+    min-height: 5em;
+    width: 100%;
+    border-color: #DDDDDD;
+    margin-bottom: 2em;
+
+}
