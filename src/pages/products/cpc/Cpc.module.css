@@ -1,0 +1,58 @@
+.imageconatiner{
+    position: relative;
+    margin-top: 3em;
+    padding: 0% 5%;
+
+    
+    
+    
+}
+.imagecard1{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    background-color: white;
+}
+.imagecard2{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    background-color: black;
+   
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    opacity: 0.3; 
+}
+
+.imagetext1{
+        position: absolute;
+        justify-self: center;
+        color: black;
+        font-weight: bold;
+        font-size: 24px;
+    }
+ .imagetext2{
+        position: absolute;
+        justify-self: center;
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+.overlayimage{
+        position: absolute;
+        justify-self: center;
+        opacity: 0.7;
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+        margin-left: 5%;
+        margin-right: 5%;
+    }

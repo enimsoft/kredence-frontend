@@ -1,0 +1,40 @@
+.image{
+    height: 40vh;
+    width: 100%;
+    
+}
+
+.overlayimage{
+    position: absolute;
+    opacity: 0.8;
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    
+
+}
+
+.overlaytext{
+    position: absolute;
+    color: white;
+    top: 29%;
+    left: 25%;
+    font-size: 16px;
+
+
+}
+
+.overlayheading{
+    position: absolute;
+    top: 22%;
+    left: 25%;
+    color: #CEEA9A;
+}
+
+.photocontainer{
+    margin-top: 0px;
+    padding: 0%;
+    width: 100%;
+    display: flex;
+}
+

@@ -1,0 +1,26 @@
+
+.container{
+    
+    margin: 3em 1em 1em;
+    background-color: white;
+    box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.20);
+    padding: 1em;
+    border-radius: 15px;
+
+}
+
+.content{
+    margin-bottom: 0.5em;
+    color: #6D6D6D;
+}
+.imagecontainer{
+    margin: 3em 1em 1em;
+    background-color: white;
+    box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.20);
+    border-radius: 15px;
+}
+
+.image{
+    width: 100%;
+    height: 20em;  
+}
