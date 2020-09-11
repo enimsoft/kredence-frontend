@@ -32,14 +32,14 @@
     border-left-style: hidden;
     border-bottom-style: solid;
     border-color: #2699FB;
-    margin-left: 0.5em;
+    margin-left: 0px;
     margin-bottom: 3em;
+    padding: 0px;
+    width: 100%;
 }
 
 .textfield::placeholder{
     color: #2699FB;
-    
-
 }
 
 .para{
@@ -58,4 +58,54 @@
 .logos{
     margin-top: 0.5em;
     height: 30px;
+}
+
+
+@media only screen and (min-width: 900px) {
+
+    .dpage{
+        padding-left: 10%;
+        padding-right: 10%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: start;
+        margin-top: 5em;
+        grid-column-gap: 10em;
+        
+    }
+
+    .para{
+        font-size: 16px;
+        }
+
+    
+    .textfield{
+        width: 50%;
+    }
+
+    .dimage{
+        order: 2;
+    }
+
+    .heading{
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+    
+    .hr1{
+        margin-right: 10%;
+        margin-left: 10%;
+    
+    }
+    .image{
+        height: 35vh;
+    }
+
+    .other{
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr 3fr 3fr;
+        padding-left: 10%;
+        grid-gap: 3em;
+    }
+
 }

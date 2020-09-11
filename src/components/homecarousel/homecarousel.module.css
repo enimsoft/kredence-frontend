@@ -1,40 +1,97 @@
-.image{
-    height: 40vh;
-    width: 100%;
+@media only screen and (min-width: 0px) and (max-width: 900px) {
+
+    .image {
+        height: 50vh;
+        width: 100%;
     
-}
-
-.overlayimage{
-    position: absolute;
-    opacity: 0.8;
-    width: 100%;
-    height: 40vh;
-    object-fit: cover;
+    }
+    
+    .overlayimage {
+        position: absolute;
+        opacity: 0.7;
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+    
+    }
+    
+    .overlaytext {
+        position: absolute;
+        color: white;
+        font-size: 16px;
+        justify-self: center;
+        margin: 0px;
+        top: 36%;
+    }
+    
+    .overlayheading {
+        position: absolute;
+        color: #CEEA9A;
+    }
+    
+    .photocontainer {
+        /* margin-top: 0px;
+        padding: 0%;
+        width: 100%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center; */
+    
+        margin-top: 0px;
+        padding: 0%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     
 
 }
 
-.overlaytext{
-    position: absolute;
-    color: white;
-    top: 29%;
-    left: 25%;
-    font-size: 16px;
+@media only screen and (min-width: 900px) {
 
+    .image {
+        height: 85vh;
+        width: 100%;
+    }
 
+    .overlayimage {
+        height: 85vh;
+        position: absolute;
+        opacity: 0.7;
+        width: 80%;
+        object-fit: cover;
+        /* width: 0;
+        height: 0; */
+        /* border-top: 100px solid; */
+        border-top: 85vh solid;
+        border-right: 30em solid transparent;
+    }
+
+    .overlayheading {
+        position: absolute;
+        font-size: 160px;
+        top: 25%;
+        color: #CEEA9A;
+        left: 10%;
+    }
+
+    .overlaytext{
+        left: 11%;
+        font-size: 56px;
+        position: absolute;
+        color: white;
+        margin-top: 0.5em;
+    }
+
+    .photocontainer {
+        justify-content: start;
+        margin-top: 0px;
+        padding: 0%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        
+    }
 }
-
-.overlayheading{
-    position: absolute;
-    top: 22%;
-    left: 25%;
-    color: #CEEA9A;
-}
-
-.photocontainer{
-    margin-top: 0px;
-    padding: 0%;
-    width: 100%;
-    display: flex;
-}
-

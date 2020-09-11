@@ -25,20 +25,63 @@
 
 }
 
+
 .textfield{
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: solid;
-    border-color: #DDDDDD;
-    margin-left: 0.5em;
     margin-bottom: 3em;
+    padding-left: 5%;
+    width: 100%;
+
 }
 .textarea{
     resize: vertical;
-    min-height: 5em;
+    min-height: 7em;
     width: 100%;
-    border-color: #DDDDDD;
+    border-color: #5c4141;
     margin-bottom: 2em;
 
+}
+
+@media only screen and (min-width: 900px) {
+
+    .heading{
+        margin-left: 10%;
+        padding: 0px;
+    }
+    .hr1{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .cform{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-left: 10%;
+        margin-right: 10%;
+        grid-gap: 5em;
+        margin-top: 5em;
+    }
+
+    .adress{
+        order: 2;
+        padding: 0px;
+    }
+
+    .form{
+        margin: 0px;
+    }
+
+    .hr1{
+        width: 40%;
+    }
+    .textarea{
+        min-height: 15em;
+    }
+
+    .image{
+        height: 40vh;
+    }
 }

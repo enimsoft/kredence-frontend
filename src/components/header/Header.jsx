@@ -10,10 +10,13 @@ import {
   useParams,
 } from "react-router-dom";
 
+// style={{ boxShadow: "0px 6px 20px 0px rgba(0,0,0,0.10)", position:'sticky',top:'0', backgroundColor:'#ffffff', width: '100%', zIndex:'1'}}
+
 function Header() {
   return (
-    <Navbar
-      style={{ boxShadow: "0px 6px 20px 0px rgba(0,0,0,0.10)", position:'sticky',top:'0', backgroundColor:'#ffffff', width: '100%', zIndex:'1'}}
+    <div className={styles.header}>
+       <Navbar class='header'
+      
       expand="lg"
     >
       <Navbar.Brand as={Link} to="/" href="#home">
@@ -25,7 +28,7 @@ function Header() {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav className="ml-auto">
           <Nav.Link className={styles.navitems} as={Link} to="/" href="#home">
             Home
           </Nav.Link>
@@ -34,9 +37,11 @@ function Header() {
               <span className={styles.navitems}>Products</span>
           }
             style={{color:'#358ED3'}}
+            
             id="nav-dropdown"
+            
           >
-            <NavDropdown.Item as={Link} to="/products/honeywell" className={styles.navitems}>Honeywell</NavDropdown.Item>
+            <NavDropdown.Item as={Link} to="/products/honeywell" className={styles.navitems} >Honeywell</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/products/cpc" className={styles.navitems}>CPC</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/products/elementum" className={styles.navitems}>Elementum</NavDropdown.Item>
             <NavDropdown.Item as={Link} to="/products/altapure" className={styles.navitems}>Altapure</NavDropdown.Item>
@@ -71,6 +76,8 @@ function Header() {
         {/* <hr style={{ color: "#2699FB", margin: "0px" }} /> */}
       </Navbar.Collapse>
     </Navbar>
+    </div>
+   
   );
 }
 

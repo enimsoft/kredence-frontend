@@ -14,11 +14,14 @@
   border: none;
   border-radius: 5px;
   color: white;
-  padding: 5%;
+  padding: 0.9em 2em;
   box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.10);
 
 }
-
+.usericon{
+  position: absolute;
+  
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -48,3 +51,11 @@
     transform: rotate(360deg);
   }
 }
+
+@media only screen and (min-width: 900px) {
+  .header{
+    width: 20%;
+  }
+}
+
+
