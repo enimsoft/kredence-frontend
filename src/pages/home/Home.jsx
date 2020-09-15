@@ -73,6 +73,7 @@ return (
     </div>
 
     <div className={styles.expcard}>
+    <img className={styles.eimage2} src={require("../../assets/p1.jpeg")} alt="" />
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
         Reprehenderit, voluptatum laudantium? Ipsum obcaecati magni earum,
@@ -80,8 +81,7 @@ return (
         quibusdam tempora similique fugiat dicta.
       </p>
 
-      <img className={styles.eimage}
-       src={require("../../assets/p1.jpeg")} alt="" />
+      
     </div>
   </div>
 
@@ -92,26 +92,26 @@ return (
 
   <div className={styles.diff}>
     <div>
-    <img className={styles.dimg} src={beaker} alt=""></img>
-    <h2 className={styles.diffhead}>Performance Chemicals</h2>
-    <p className={styles.difftext}>Supply Of High Purity Chemicals</p>
-    </div>
-    
-    <div>
-    <img className={styles.dimg} src={setting} alt=""></img>
-    <h2 className={styles.diffhead}>{"Services & Reliabilitys"}</h2>
-    <p className={styles.difftext}>
-      Our Team Professionals Are Highly Trained To Provide You Non Stop
-      Servicess
-    </p>
+      <img className={styles.dimg} src={beaker} alt=""></img>
+      <h2 className={styles.diffhead}>Performance Chemicals</h2>
+      <p className={styles.difftext}>Supply Of High Purity Chemicals</p>
     </div>
 
     <div>
-    <img className={styles.dimg} src={quality} alt=""></img>
-    <h2 className={styles.diffhead}>{"Quality Products"}</h2>
-    <p className={styles.difftext}>
-      We Provide Consistently Zero Defect High Quality Products
-    </p>
+      <img className={styles.dimg} src={setting} alt=""></img>
+      <h2 className={styles.diffhead}>{"Services & Reliabilitys"}</h2>
+      <p className={styles.difftext}>
+        Our Team Professionals Are Highly Trained To Provide You Non Stop
+        Servicess
+      </p>
+    </div>
+
+    <div>
+      <img className={styles.dimg} src={quality} alt=""></img>
+      <h2 className={styles.diffhead}>{"Quality Products"}</h2>
+      <p className={styles.difftext}>
+        We Provide Consistently Zero Defect High Quality Products
+      </p>
 
     </div>
   </div>
