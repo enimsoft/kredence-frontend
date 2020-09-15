@@ -6,7 +6,7 @@ import {Form} from 'react-bootstrap';
 
 function Contact() {
 return (
-<div>
+<div className={styles.c}>
   <Header />
   <h2 className={styles.heading}>Contact US</h2>
   <hr className={styles.hr1} />

@@ -5,7 +5,7 @@ import pstyles from '../product.module.css'
 
 function Altapure() {
 return (
-<div>
+<div className={styles.a}>
   <Header />
   <div className={pstyles.head}>
     <h2 className={pstyles.heading}>Altapure</h2>

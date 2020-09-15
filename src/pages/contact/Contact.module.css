@@ -74,6 +74,10 @@
         margin: 0px;
     }
 
+    .c{
+        min-height: 100vh;
+    }
+
     .hr1{
         width: 40%;
     }

@@ -74,6 +74,11 @@
         
     }
 
+    .t{
+        min-height: 100vh;
+    
+    }
+
     .para{
         font-size: 16px;
         }

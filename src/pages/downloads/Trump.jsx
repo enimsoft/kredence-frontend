@@ -5,7 +5,7 @@ import Header from "../../components/header/Header";
 const filename = "test.pdf";
 function TrumpCard() {
 return (
-<div>
+<div className={styles.t}>
   <Header />
   <h2 className={styles.heading}>Trump Card</h2>
   <hr className={styles.hr1} />
