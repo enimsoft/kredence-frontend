@@ -24,11 +24,10 @@ return (
   </Carousel>
 
   <img className={styles.overlayimage} src={black} alt="" />
-  <h1 className={styles.overlayheading}>Kredence
-  </h1>
+  <h1 className={styles.overlayheading}>Kredence <span><p className={styles.overlaytext}>performance<span style={{ color: "#6CB3EA" }}>materials</span>{" "}
+  </p></span></h1>
 
-  <p className={styles.overlaytext}>performance<span style={{ color: "#6CB3EA" }}>materials</span>{" "}
-  </p>
+  
 </div>
 
 );

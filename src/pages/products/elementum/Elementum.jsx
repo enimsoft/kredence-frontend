@@ -27,7 +27,9 @@ function Elementum() {
         </button>
         
       </div>
+      <div className={styles.elmt}>
       <div className={styles.container}>
+        <div></div>
         <h3 style={{ color: "black" }}> PV Grade </h3>
         <p>
           Available in Bulk packs & in IBC (along with Dip tube for safe
@@ -75,6 +77,7 @@ function Elementum() {
           alt=""
           className={styles.image}
         />
+      </div>
       </div>
     </div>
   );

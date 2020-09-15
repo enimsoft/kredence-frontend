@@ -1,0 +1,27 @@
+.footer{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    bottom: 0px;
+    margin-top: 3em;
+    padding: 1.5em 10% ;
+    background-color: black;
+    grid-column-gap: 2em;
+}
+
+.footertext{
+    color: white;
+    margin-bottom: 0em;
+    font-size: 8px;
+}
+
+.footerhead{
+    color: white;
+    font-size: 16px;
+    margin-bottom: 1em;
+}
+
+.enimlogo{
+    width: 20%;
+    height: auto;
+}

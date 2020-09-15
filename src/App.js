@@ -12,6 +12,7 @@ import Honeywell from './pages/products/honeywell/Honeywell';
 import Elementum from './pages/products/elementum/Elementum';
 import Altapure from './pages/products/altapure/Altapure';
 import Cpc from './pages/products/cpc/Cpc';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -55,6 +56,8 @@ function App() {
         </Switch>
         
         </BrowserRouter>
+
+        <Footer />
     </div>
       
 

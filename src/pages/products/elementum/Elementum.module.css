@@ -24,3 +24,23 @@
     width: 100%;
     height: 20em;  
 }
+
+@media only screen and (min-width: 900px) {
+
+    .elmt{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 5em 10%;
+        grid-gap: 2em;
+    }
+    .imagecontainer{
+        padding: 0px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin: 0px; 
+    }
+
+    .container{
+        margin: 0px;
+    }
+}

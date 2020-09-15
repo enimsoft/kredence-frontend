@@ -35,3 +35,31 @@
 .head{
     padding: 0% 5%;
 }
+
+.link{
+    font-size: 8px;
+    color: black;
+
+}
+
+
+@media only screen and (min-width: 900px) {
+
+    .head{
+        margin: 0 10%;   
+        padding: 0px ;
+    }
+
+    .searchNcatalogue{
+        margin: 3em 10%;
+        padding: 0px
+    }
+
+    .button{
+        width: 100%;
+        grid-column-end: 4;
+    }
+    .link{
+        font-size: 12px;
+    }
+}

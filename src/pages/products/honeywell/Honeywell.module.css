@@ -12,9 +12,34 @@
 }
 .cardheading{
     color: black;
+    margin-top: 1em;
 }
 
 .cardtext{
     color: #6C6C6C;
     margin-top: 1em;
+}
+
+
+@media only screen and (min-width: 900px) {
+
+    .head{
+        margin: 0 10%;    
+    }
+
+    .cardContainer{
+        display: grid;
+        margin: 3em 10%;
+        padding: 0px;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 2em;
+    }
+
+    .cardimage{
+        height: 20vh;
+    }
+
+    .cardheading{
+        margin-top: 1em;
+    }
 }

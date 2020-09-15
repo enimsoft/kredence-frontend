@@ -15,7 +15,25 @@
     margin-top: 3em;
     background-color: white;
 }
+.imagecard3{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    background-color: white;
+}
 .imagecard2{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    background-color: black;
+   
+}
+
+.imagecard4{
     height: 40vh;
     display: flex;
     justify-content: center;
@@ -38,6 +56,8 @@
         font-weight: bold;
         font-size: 24px;
     }
+
+    
  .imagetext2{
         position: absolute;
         justify-self: center;
@@ -55,4 +75,55 @@
         object-fit: cover;
         margin-left: 5%;
         margin-right: 5%;
+    }
+
+
+    @media only screen and (min-width: 900px) {
+
+        .cpc{
+            /* display: grid;
+            grid-template-columns: repeat(2,1fr); */
+        }
+
+        .imageconatiner{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin: 3em 10%;
+            padding: 0px;
+            grid-gap: 0px;
+            box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.20);   
+        }
+        .imagecard1{
+            margin: 0px;
+            border-radius: 10px 0px 0px 0px;
+            
+            /* order: 2; */
+            
+        }
+        .imagecard2{
+            margin: 0px;
+            border-radius: 0px 10px 0px 0px;
+
+        }
+        .imagecard3{
+            margin: 0px;
+            order: 4;
+            
+
+        }
+        .imagecard4{
+            
+            margin: 0px;
+            border-radius: 0px 0px 0px 10px;
+        }
+
+        .image:hover{
+            opacity: 1;
+        }
+
+        .image:hover .imagetext1{
+            
+            visibility: hidden;
+            
+        }
     }

@@ -9,7 +9,7 @@ function Honeywell() {
       <Header />
       <div className={pstyles.head}>
         <h2 className={pstyles.heading}>Honeywell</h2>
-        <p style={{ fontSize: "8px", color: "black" }}>
+        <p className={pstyles.link}>
           For more info visit{" "}
           <a href="https://lab.honeywell.com" style={{ color: "black" }}>
             <u>Honeywell.com</u>

@@ -72,13 +72,13 @@
     .overlayheading {
         position: absolute;
         font-size: 160px;
-        top: 25%;
+        top: 10%;
         color: #CEEA9A;
         left: 10%;
     }
 
     .overlaytext{
-        left: 11%;
+        /* left: 11%; */
         font-size: 56px;
         position: absolute;
         color: white;

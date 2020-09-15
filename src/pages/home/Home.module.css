@@ -95,16 +95,18 @@ FormControl{
     .products{
         grid-template-columns: repeat(4,1fr );
         margin: 0 auto 0 auto;
+        justify-content: center;
         margin-top: 5em;
         width: 80%;
         height: 30vh;
-        grid-column-gap: 10em;
+        padding: 0px;
     }
 
     .headings{
         margin: 0 auto 0 auto;
         width: 80%;
         margin-top: 5em;
+        padding: 0px;
     }
 
     .expcard{
@@ -126,12 +128,21 @@ FormControl{
        width: 573 px;
     }
 
+    .diffhead{
+        padding: 0px;
+    }
+
     .diff{
         grid-template-columns: repeat(3,1fr);
         margin: 0 auto 0 auto;
         width: 80%;
         grid-column-gap: 5em;
         margin-top: 5em;
+        padding: 0px;
+    }
+
+    .exp{
+        padding: 2em 0px;
     }
 
 }
