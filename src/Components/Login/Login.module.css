@@ -1,0 +1,19 @@
+.mainContainer {
+  margin: 5em 10% 10rem;
+}
+
+.heading {
+  margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  width: 50%;
+}
