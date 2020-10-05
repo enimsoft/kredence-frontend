@@ -1,0 +1,91 @@
+.image{
+    height: 30vh;
+    width: 100%;
+    border-radius: 10px;
+}
+.heading{
+    font-size: 24px;
+    color: black;
+    padding: 0% 5%;
+    margin-top: 5%;
+}
+
+.hr1{
+    background-color:  black;
+    margin: 0% 5%;
+}
+
+.adress{
+    margin-top: 0.5em;
+    padding: 0% 5%;
+    display: grid;
+}
+.form{
+    margin: 0% 5%;
+
+}
+
+
+.textfield{
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: solid;
+    margin-bottom: 3em;
+    padding-left: 5%;
+    width: 100%;
+
+}
+.textarea{
+    resize: vertical;
+    min-height: 7em;
+    width: 100%;
+    border-color: #5c4141;
+    margin-bottom: 2em;
+
+}
+
+@media only screen and (min-width: 900px) {
+
+    .heading{
+        margin-left: 10%;
+        padding: 0px;
+    }
+    .hr1{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .cform{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-left: 10%;
+        margin-right: 10%;
+        grid-gap: 5em;
+        margin-top: 5em;
+    }
+
+    .adress{
+        order: 2;
+        padding: 0px;
+    }
+
+    .form{
+        margin: 0px;
+    }
+
+    .c{
+        min-height: 100vh;
+    }
+
+    .hr1{
+        width: 40%;
+    }
+    .textarea{
+        min-height: 15em;
+    }
+
+    .image{
+        height: 35vh;
+    }
+}
