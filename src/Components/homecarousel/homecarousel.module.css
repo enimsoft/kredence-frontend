@@ -24,7 +24,6 @@
   .overlayheading {
     position: absolute;
     color: #ceea9a;
-    font-family: "Playfair Display", serif;
   }
 
   .photocontainer {
@@ -70,7 +69,6 @@
     top: 30%;
     color: #ceea9a;
     left: 10%;
-    font-family: "Playfair Display", serif;
   }
 
   .overlaytext {
