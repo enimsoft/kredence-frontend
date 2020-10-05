@@ -65,9 +65,10 @@
   .overlayheading {
     position: absolute;
     font-size: 160px;
-    top: 10%;
+    top: 40%;
     color: #ceea9a;
     left: 10%;
+    font-family: "Playfair Display", serif;
   }
 
   .overlaytext {

@@ -35,7 +35,7 @@ function HomeCarousel() {
 
       <img className={styles.overlayimage} src={black} alt="" />
       <h1 className={styles.overlayheading}>
-        Kredence{" "}
+        Kredence
         <span>
           <p className={styles.overlaytext}>
             performance<span style={{ color: "#6CB3EA" }}>materials</span>{" "}

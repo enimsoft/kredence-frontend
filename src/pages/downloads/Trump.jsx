@@ -25,7 +25,7 @@ function TrumpCard() {
             className={styles.textfield}
           />
           <br />
-          <button class="pbutton" type="button">
+          <button class={styles.pbutton} type="button">
             <i
               class="fa fa-arrow-down"
               aria-hidden="true"
