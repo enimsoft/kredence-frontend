@@ -30,6 +30,16 @@
   margin-bottom: 5px;
 }
 
+.content {
+  margin-bottom: 0.5em;
+  color: #6d6d6d;
+}
+
+.contentGlow {
+  margin-bottom: 0.5em;
+  color: blue;
+}
+
 .table {
   width: 68%;
   padding: 1rem;

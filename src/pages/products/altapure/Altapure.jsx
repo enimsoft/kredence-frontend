@@ -6,150 +6,202 @@ import pstyles from "../product.module.css";
 
 function Altapure() {
   const [product, setProduct] = useState("solvent");
+  const [search, setSearch] = useState("");
 
-  const solvent = [
-    { text: "Acetone", value: "200 L" },
-    { text: "Acetone", value: "	25 L" },
-    { text: "Benzyl Alcohol", value: "	25 L" },
-    { text: "n-Butanol", value: "	25 L" },
-    { text: "Chloroform", value: "200 L" },
-    { text: "Chloroform", value: "	25 L" },
-    { text: "Dichloromethane", value: "200 L" },
-    { text: "Dichloromethane", value: "	25 L" },
-    { text: "Dimethyl Formamide", value: "200 L" },
-    { text: "Dimethyl Formamide", value: "	25 L" },
-    { text: "Dimethyl Sulphoxide", value: "200 L" },
-    { text: "Dimethyl Sulphoxide", value: "	25 L" },
-    { text: "Ethyl Acetate", value: "200 L" },
-    { text: "Ethyl Acetate", value: "	25 L" },
-    { text: "Ethylene Glycol", value: "200 L" },
-    { text: "Ethylene Glycol", value: "	25 L" },
-    { text: "Glycerol", value: "	25 L" },
-    { text: "Hydrazine Hydrate 100%", value: "200 L" },
-    { text: "Hydrazine Hydrate 100%", value: "	25 L" },
-    { text: "Hydrazine Hydrate 80%", value: "200 L" },
-    { text: "Hydrazine Hydrate 80%", value: "	25 L" },
-    { text: "iso-Butyl Methyl Ketone", value: "	25 L" },
-    { text: "iso-Propyl Alcohol", value: "200 L" },
-    { text: "iso-Propyl Alcohol", value: "	25 L" },
-    { text: " n-Propyl Alcohol", value: "	25 L" },
-    { text: "Morpholine", value: "200 L" },
-    { text: "NMP", value: "	25 L" },
-    { text: "Pet Ether 40-60° C ", value: "	25 L" },
-    { text: "Pet Ether 40-60° C ", value: "200 L" },
-    { text: "Pet Ether 60-80° C", value: "	25 L" },
-    { text: "Pet Ether 60-80° C", value: "200 L" },
-    { text: "Toluene", value: "	25 L" },
-    { text: "Toluene", value: "200 L" },
-    { text: "Toluene (Benzene Free)", value: "	25 L" },
-    { text: "Toluene (Benzene Free)", value: "200 L" },
-    { text: "Xylene", value: "	25 L" },
-  ];
+  const [solvent, setSolvent] = useState([
+    { text: "Acetone", value: "200 L", glow: false },
+    { text: "Acetone", value: "	25 L", glow: false },
+    { text: "Benzyl Alcohol", value: "	25 L", glow: false },
+    { text: "n-Butanol", value: "	25 L", glow: false },
+    { text: "Chloroform", value: "200 L", glow: false },
+    { text: "Chloroform", value: "	25 L", glow: false },
+    { text: "Dichloromethane", value: "200 L", glow: false },
+    { text: "Dichloromethane", value: "	25 L", glow: false },
+    { text: "Dimethyl Formamide", value: "200 L", glow: false },
+    { text: "Dimethyl Formamide", value: "	25 L", glow: false },
+    { text: "Dimethyl Sulphoxide", value: "200 L", glow: false },
+    { text: "Dimethyl Sulphoxide", value: "	25 L", glow: false },
+    { text: "Ethyl Acetate", value: "200 L", glow: false },
+    { text: "Ethyl Acetate", value: "	25 L", glow: false },
+    { text: "Ethylene Glycol", value: "200 L", glow: false },
+    { text: "Ethylene Glycol", value: "	25 L", glow: false },
+    { text: "Glycerol", value: "	25 L", glow: false },
+    { text: "Hydrazine Hydrate 100%", value: "200 L", glow: false },
+    { text: "Hydrazine Hydrate 100%", value: "	25 L", glow: false },
+    { text: "Hydrazine Hydrate 80%", value: "200 L", glow: false },
+    { text: "Hydrazine Hydrate 80%", value: "	25 L", glow: false },
+    { text: "iso-Butyl Methyl Ketone", value: "	25 L", glow: false },
+    { text: "iso-Propyl Alcohol", value: "200 L", glow: false },
+    { text: "iso-Propyl Alcohol", value: "	25 L", glow: false },
+    { text: " n-Propyl Alcohol", value: "	25 L", glow: false },
+    { text: "Morpholine", value: "200 L", glow: false },
+    { text: "NMP", value: "	25 L", glow: false },
+    { text: "Pet Ether 40-60° C ", value: "	25 L", glow: false },
+    { text: "Pet Ether 40-60° C ", value: "200 L", glow: false },
+    { text: "Pet Ether 60-80° C", value: "	25 L", glow: false },
+    { text: "Pet Ether 60-80° C", value: "200 L", glow: false },
+    { text: "Toluene", value: "	25 L", glow: false },
+    { text: "Toluene", value: "200 L", glow: false },
+    { text: "Toluene (Benzene Free)", value: "	25 L", glow: false },
+    { text: "Toluene (Benzene Free)", value: "200 L", glow: false },
+    { text: "Xylene", value: "	25 L", glow: false },
+  ]);
 
-  const acids = [
-    { text: "Acetic Acid ", value: "5 L" },
-    { text: "Hydrochloric Acid", value: "5 L" },
-    { text: "Hydrochloric Acid", value: "25 L" },
-    { text: "Hydrogen Peroxide (6%/30%/50%)", value: "5 L" },
-    { text: "Hydrogen Peroxide (6%/30%/50%)", value: "25 L" },
-    { text: "Hydroflouric Acid 50% EL", value: "25 L" },
-    { text: "Hydroflouric Acid 50% EL", value: "200 L" },
-    { text: "Lactic Acid", value: "25 L" },
-    { text: "Ortho Phosphoric Acid 85%", value: "25 L" },
-    { text: "Ortho Phosphoric Acid 88%", value: "25 L" },
-    { text: "Nitric Acid", value: "5 L" },
-    { text: "Nitric Acid", value: "25 L" },
-    { text: "Nitric Acid EL", value: "5 L" },
-    { text: "Nitric Acid EL", value: "25 L" },
-    { text: "Potassium Hydroxide Solution 50%", value: "25 L" },
-    { text: "Potassium Hydroxide Solution 50%", value: "200 L" },
-    { text: "Potassium Hydroxide Solution 50% EL", value: "25 L" },
-    { text: "Potassium Hydroxide Solution 50% EL", value: "200 L" },
-    { text: "Sodium Hydroxide Solution 50%", value: "25 L" },
-    { text: "Sodium Hydroxide Solution 50%", value: "200 L" },
-    { text: "Sulphuric Acid", value: "5 L" },
-    { text: "Sulphuric Acid", value: "25 L" },
-  ];
+  const [acids, setAcid] = useState([
+    { text: "Acetic Acid ", value: "5 L", glow: false },
+    { text: "Hydrochloric Acid", value: "5 L", glow: false },
+    { text: "Hydrochloric Acid", value: "25 L", glow: false },
+    { text: "Hydrogen Peroxide (6%/30%/50%)", value: "5 L", glow: false },
+    { text: "Hydrogen Peroxide (6%/30%/50%)", value: "25 L", glow: false },
+    { text: "Hydroflouric Acid 50% EL", value: "25 L", glow: false },
+    { text: "Hydroflouric Acid 50% EL", value: "200 L", glow: false },
+    { text: "Lactic Acid", value: "25 L", glow: false },
+    { text: "Ortho Phosphoric Acid 85%", value: "25 L", glow: false },
+    { text: "Ortho Phosphoric Acid 88%", value: "25 L", glow: false },
+    { text: "Nitric Acid", value: "5 L", glow: false },
+    { text: "Nitric Acid", value: "25 L", glow: false },
+    { text: "Nitric Acid EL", value: "5 L", glow: false },
+    { text: "Nitric Acid EL", value: "25 L", glow: false },
+    { text: "Potassium Hydroxide Solution 50%", value: "25 L", glow: false },
+    { text: "Potassium Hydroxide Solution 50%", value: "200 L", glow: false },
+    { text: "Potassium Hydroxide Solution 50% EL", value: "25 L", glow: false },
+    {
+      text: "Potassium Hydroxide Solution 50% EL",
+      value: "200 L",
+      glow: false,
+    },
+    { text: "Sodium Hydroxide Solution 50%", value: "25 L", glow: false },
+    { text: "Sodium Hydroxide Solution 50%", value: "200 L", glow: false },
+    { text: "Sulphuric Acid", value: "5 L", glow: false },
+    { text: "Sulphuric Acid", value: "25 L", glow: false },
+  ]);
 
-  const inorganic = [
-    { text: "Ammonium Dihydrogen Phosphate Monobasic" },
-    { text: "Ammonium Phosphate Dibasic (Di-AmmoniumHydrogen O Phosphate)" },
-    { text: "Calcium Chloride (Fused)" },
-    { text: "Charcoal Activated" },
-    { text: "Citric Acid Anhydrous" },
-    { text: "Citric Acid Monohydrate" },
-    { text: "Copper Sulphate" },
-    { text: "Dextrose Anhydrous" },
-    { text: "E.D.T.A. Disodium Salt Dihydrate" },
-    { text: "E.D.T.A. Dipotassium Dihydrate Salt" },
-    { text: "Ferric Chloride Hexahydrate" },
-    { text: "Magnesium Carbonate Light" },
-    { text: "Magnesium Sulphate Dihydrate" },
-    { text: "Magnesium Sulphate Heptahydrate" },
-    { text: "Manganous Sulphate Monohydrate" },
-    { text: "Potassium Chloride" },
-    { text: "Potassium Dihydrogen Orthophosphate" },
+  const [inorganic, setInorganic] = useState([
+    { text: "Ammonium Dihydrogen Phosphate Monobasic", glow: false },
+    {
+      text: "Ammonium Phosphate Dibasic (Di-AmmoniumHydrogen O Phosphate)",
+      glow: false,
+    },
+    { text: "Calcium Chloride (Fused)", glow: false },
+    { text: "Charcoal Activated", glow: false },
+    { text: "Citric Acid Anhydrous", glow: false },
+    { text: "Citric Acid Monohydrate", glow: false },
+    { text: "Copper Sulphate", glow: false },
+    { text: "Dextrose Anhydrous", glow: false },
+    { text: "E.D.T.A. Disodium Salt Dihydrate", glow: false },
+    { text: "E.D.T.A. Dipotassium Dihydrate Salt", glow: false },
+    { text: "Ferric Chloride Hexahydrate", glow: false },
+    { text: "Magnesium Carbonate Light", glow: false },
+    { text: "Magnesium Sulphate Dihydrate", glow: false },
+    { text: "Magnesium Sulphate Heptahydrate", glow: false },
+    { text: "Manganous Sulphate Monohydrate", glow: false },
+    { text: "Potassium Chloride", glow: false },
+    { text: "Potassium Dihydrogen Orthophosphate", glow: false },
     {
       text:
         "Potassium Dihydrogen Orthophosphate (Potassium Phosphate Monobasic)",
     },
-    { text: "Potassium Metabisulphite" },
-    { text: "Potassium Nitrate" },
+    { text: "Potassium Metabisulphite", glow: false },
+    { text: "Potassium Nitrate", glow: false },
     {
       text:
         "Potassium Phosphate Dibasic Anhydrous (Dipotassium Hydrogen Phosphate)",
     },
-    { text: "Sodium Acetate 3Hydrate" },
-    { text: "Sodium Acetate Anhydrous" },
-    { text: "Sodium Bicarbonate" },
-    { text: "Sodium Carbonate Anhydrous" },
-    { text: "Sodium Chloride" },
-    { text: "Sodium Citrate Dihydrate" },
-    { text: "Sodium Dichromate Dihydrate" },
-    { text: "Sodium Hydroxide Pellets" },
-    { text: "Sodium Hexametaphosphate" },
-    { text: "Sodium Nitrate" },
-    { text: "Sodium Phosphate mono basic dihydrate" },
-    { text: "Sodium Phosphate mono basic mono hydrate" },
-    { text: "Sodium Phosphate Dibasic Anhydrous" },
-    { text: "Sodium Phosphate Dibasic Dihydrate" },
-    { text: "Sodium Sulphate Anhydrous" },
-    { text: "Sucrose" },
-    { text: "Thiourea" },
-    { text: "Titanium Dioxide" },
-    { text: "Tris Buffer" },
-    { text: "Tri-Sodium Orthophosphate (Tri Sodium Phosphate)" },
-    { text: "Urea" },
-    { text: "Zinc Oxide" },
-    { text: "Zinc Sulphate Heptahydrate" },
-  ];
+    { text: "Sodium Acetate 3Hydrate", glow: false },
+    { text: "Sodium Acetate Anhydrous", glow: false },
+    { text: "Sodium Bicarbonate", glow: false },
+    { text: "Sodium Carbonate Anhydrous", glow: false },
+    { text: "Sodium Chloride", glow: false },
+    { text: "Sodium Citrate Dihydrate", glow: false },
+    { text: "Sodium Dichromate Dihydrate", glow: false },
+    { text: "Sodium Hydroxide Pellets", glow: false },
+    { text: "Sodium Hexametaphosphate", glow: false },
+    { text: "Sodium Nitrate", glow: false },
+    { text: "Sodium Phosphate mono basic dihydrate", glow: false },
+    { text: "Sodium Phosphate mono basic mono hydrate", glow: false },
+    { text: "Sodium Phosphate Dibasic Anhydrous", glow: false },
+    { text: "Sodium Phosphate Dibasic Dihydrate", glow: false },
+    { text: "Sodium Sulphate Anhydrous", glow: false },
+    { text: "Sucrose", glow: false },
+    { text: "Thiourea", glow: false },
+    { text: "Titanium Dioxide", glow: false },
+    { text: "Tris Buffer", glow: false },
+    { text: "Tri-Sodium Orthophosphate (Tri Sodium Phosphate)", glow: false },
+    { text: "Urea", glow: false },
+    { text: "Zinc Oxide", glow: false },
+    { text: "Zinc Sulphate Heptahydrate", glow: false },
+  ]);
 
-  const cleaning = [
-    { text: "isopropyl Alcohol 70% ", value: "	25 L" },
-    { text: "isopropyl Alcohol 70% 	", value: "200 L" },
-    { text: "Hydrogen Peroxide 6%", value: " 	1 L" },
-    { text: "Hydrogen Peroxide 6%", value: " 	5 L" },
-    { text: "Hydrogen Peroxide 6% ", value: "	25 L" },
-    { text: "Hydrogen Peroxide 30%", value: " 	1 L" },
-    { text: "Hydrogen Peroxide 30%", value: " 	5 L" },
-    { text: "Hydrogen Peroxide 30% ", value: "	25 L" },
-    { text: "Hydrogen Peroxide 35%", value: " 	1 L" },
-    { text: "Hydrogen Peroxide 35%", value: " 	5 L" },
-    { text: "Hydrogen Peroxide 35% ", value: "	25 L" },
-    { text: "Hydrogen Peroxide 50%", value: " 	1 L" },
-    { text: "Hydrogen Peroxide 50%", value: " 	5 L" },
-    { text: "Hydrogen Peroxide 50% ", value: "	25 L" },
-    { text: "Sodium Hypochlorite 4-6%", value: " 	5 L" },
-    { text: "Sodium Hypochlorite 4-6% ", value: "	25 L" },
-    { text: "Sodium Hypochlorite 10-12%", value: " 	5 L" },
-    { text: "Sodium Hypochlorite 10-12% ", value: "	25 L" },
-    { text: "Formaldehyde 30L ", value: "	30 L" },
-    { text: "Formaldehyde 30L 	", value: "100 L" },
-    { text: "Microside – SG (Biocide) 	", value: "50 kg" },
-    { text: "Microside – K (Biocide) 	", value: "50 kg" },
-    { text: "lodophore", value: " 	1 L" },
-    { text: "lodophore", value: " 	5 L" },
-  ];
+  const [cleaning, setCleaning] = useState([
+    { text: "isopropyl Alcohol 70% ", value: "	25 L", glow: false },
+    { text: "isopropyl Alcohol 70% 	", value: "200 L", glow: false },
+    { text: "Hydrogen Peroxide 6%", value: " 	1 L", glow: false },
+    { text: "Hydrogen Peroxide 6%", value: " 	5 L", glow: false },
+    { text: "Hydrogen Peroxide 6% ", value: "	25 L", glow: false },
+    { text: "Hydrogen Peroxide 30%", value: " 	1 L", glow: false },
+    { text: "Hydrogen Peroxide 30%", value: " 	5 L", glow: false },
+    { text: "Hydrogen Peroxide 30% ", value: "	25 L", glow: false },
+    { text: "Hydrogen Peroxide 35%", value: " 	1 L", glow: false },
+    { text: "Hydrogen Peroxide 35%", value: " 	5 L", glow: false },
+    { text: "Hydrogen Peroxide 35% ", value: "	25 L", glow: false },
+    { text: "Hydrogen Peroxide 50%", value: " 	1 L", glow: false },
+    { text: "Hydrogen Peroxide 50%", value: " 	5 L", glow: false },
+    { text: "Hydrogen Peroxide 50% ", value: "	25 L", glow: false },
+    { text: "Sodium Hypochlorite 4-6%", value: " 	5 L", glow: false },
+    { text: "Sodium Hypochlorite 4-6% ", value: "	25 L", glow: false },
+    { text: "Sodium Hypochlorite 10-12%", value: " 	5 L", glow: false },
+    { text: "Sodium Hypochlorite 10-12% ", value: "	25 L", glow: false },
+    { text: "Formaldehyde 30L ", value: "	30 L", glow: false },
+    { text: "Formaldehyde 30L 	", value: "100 L", glow: false },
+    { text: "Microside – SG (Biocide) 	", value: "50 kg", glow: false },
+    { text: "Microside – K (Biocide) 	", value: "50 kg", glow: false },
+    { text: "lodophore", value: " 	1 L", glow: false },
+    { text: "lodophore", value: " 	5 L", glow: false },
+  ]);
+
+  const handleSearch = (e) => {
+    const newSearch = e.target.value;
+    setSearch(newSearch);
+
+    let newContent;
+    switch (product) {
+      case "solvent":
+        newContent = solvent;
+        break;
+      case "acid":
+        newContent = acids;
+        break;
+      case "inorganic":
+        newContent = inorganic;
+        break;
+      default:
+        newContent = cleaning;
+    }
+
+    newContent.map((item) => {
+      if (
+        item.text.toLowerCase().startsWith(newSearch.toLowerCase()) &&
+        newSearch.length > 0
+      )
+        item.glow = true;
+      else item.glow = false;
+      return;
+    });
+
+    switch (product) {
+      case "solvent":
+        setSolvent(newContent);
+        break;
+      case "acid":
+        setAcid(newContent);
+        break;
+      case "inorganic":
+        setInorganic(newContent);
+        break;
+      default:
+        setCleaning(newContent);
+    }
+  };
 
   function displayProduct() {
     let data = null;
@@ -175,8 +227,19 @@ function Altapure() {
             Products are available in 25kgs & 50kgs pack size
           </h5>
 
-          {data.map((item, key) => {
-            return <p key={key}>{item.text}</p>;
+          {data.map((item, index) => {
+            if (item.glow)
+              return (
+                <p className={styles.contentGlow} key={index}>
+                  {item.text}
+                </p>
+              );
+            else
+              return (
+                <p className={styles.content} key={index}>
+                  {item.text}
+                </p>
+              );
           })}
         </>
       );
@@ -188,12 +251,20 @@ function Altapure() {
             <h5 style={{ fontWeight: "800" }}> Pack Size</h5>
           </div>
           {data.map((item, index) => {
-            return (
-              <div className={styles.productItem} key={index}>
-                <p>{item.text}</p>
-                <p> {item.value}</p>
-              </div>
-            );
+            if (item.glow)
+              return (
+                <div className={styles.productItem} key={index}>
+                  <p className={styles.contentGlow}>{item.text}</p>
+                  <p className={styles.contentGlow}> {item.value}</p>
+                </div>
+              );
+            else
+              return (
+                <div className={styles.productItem} key={index}>
+                  <p className={styles.content}>{item.text}</p>
+                  <p className={styles.content}> {item.value}</p>
+                </div>
+              );
           })}
         </>
       );
@@ -201,7 +272,26 @@ function Altapure() {
   }
 
   const handleClick = (value) => {
-    if (value !== product) setProduct(value);
+    if (value !== product) {
+      setProduct(value);
+      setSearch("");
+
+      let content = solvent;
+      content.map((text) => (text.glow = false));
+      setSolvent(content);
+
+      content = acids;
+      content.map((text) => (text.glow = false));
+      setAcid(content);
+
+      content = inorganic;
+      content.map((text) => (text.glow = false));
+      setInorganic(content);
+
+      content = cleaning;
+      content.map((text) => (text.glow = false));
+      setCleaning(content);
+    }
   };
 
   return (
@@ -214,9 +304,11 @@ function Altapure() {
 
       <div className={pstyles.searchNcatalogue}>
         <input
-          type="email"
+          type="text"
           placeholder="Search"
           className={pstyles.textfield}
+          value={search}
+          onChange={handleSearch}
         />
         <button class="pbutton" className={pstyles.button} type="button">
           <i

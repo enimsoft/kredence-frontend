@@ -26,7 +26,7 @@ function Msds() {
             className={styles.textfield}
           />
           <br />
-          <button class={styles.pbutton} type="button">
+          <button className="pbutton" type="button">
             <i
               class="fa fa-arrow-down"
               aria-hidden="true"
