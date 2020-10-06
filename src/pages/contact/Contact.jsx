@@ -39,7 +39,7 @@ function Contact() {
             placeholder="Your Message...."
             className={styles.textarea}
           />
-          <button class="pbutton" type="button">
+          <button class={styles.pbutton} type="button">
             Submit
           </button>
         </div>
