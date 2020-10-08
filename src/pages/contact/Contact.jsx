@@ -29,15 +29,20 @@ function Contact() {
 
       <div className={styles.cform}>
         <div className={styles.adress}>
-          <div>
-            <img
-              className={styles.image}
-              src={require("../../assets/carousel/solar1.jpg")}
-              alt="First slide"
-            />
-          </div>
-          <div>
-            <p>A-102 ISocn heigts, Gotri road vadodara Lorem </p>
+          <div className={styles.googlemap}>
+            <GoogleMapReact
+              bootstrapURLKeys={{
+                key: "AIzaSyDWAjDA-Ju4AA3jZIEU9Rd7XRqpO1V4VU8",
+              }}
+              defaultCenter={location}
+              defaultZoom={zoomLevel}
+            >
+              <LocationPin
+                lat={location.lat}
+                lng={location.lng}
+                text={location.address}
+              />
+            </GoogleMapReact>
           </div>
         </div>
 
@@ -59,26 +64,6 @@ function Contact() {
           <button className="pbutton" type="button">
             Submit
           </button>
-        </div>
-      </div>
-
-      <div className={styles.map}>
-        <h2 className={styles.maph2}>Come Visit Us At Our Campus</h2>
-
-        <div className={styles.googlemap}>
-          <GoogleMapReact
-            bootstrapURLKeys={{
-              key: "AIzaSyDWAjDA-Ju4AA3jZIEU9Rd7XRqpO1V4VU8",
-            }}
-            defaultCenter={location}
-            defaultZoom={zoomLevel}
-          >
-            <LocationPin
-              lat={location.lat}
-              lng={location.lng}
-              text={location.address}
-            />
-          </GoogleMapReact>
         </div>
       </div>
     </div>
