@@ -40,6 +40,53 @@
   border-color: #5c4141;
   margin-bottom: 2em;
 }
+.maph2 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 20px;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.googlemap {
+  width: 60%;
+  height: 60vh;
+  margin: auto;
+}
+
+.pin {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  color: var(--main-blue);
+}
+
+.pinicon {
+  font-size: 4rem;
+}
+
+.pintext {
+  font-size: 1.3em;
+}
+
+@media screen and (min-width: 799px) {
+  .google-map {
+    height: 80vh;
+  }
+
+  .map-h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  .pin {
+    width: 15vw;
+  }
+
+  .pin-icon {
+    font-size: 10vw;
+  }
+}
 
 @media only screen and (min-width: 900px) {
   .heading {
