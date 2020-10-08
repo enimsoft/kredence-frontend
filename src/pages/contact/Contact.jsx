@@ -29,20 +29,25 @@ function Contact() {
 
       <div className={styles.cform}>
         <div className={styles.adress}>
-          <div className={styles.googlemap}>
-            <GoogleMapReact
-              bootstrapURLKeys={{
-                key: "AIzaSyDWAjDA-Ju4AA3jZIEU9Rd7XRqpO1V4VU8",
-              }}
-              defaultCenter={location}
-              defaultZoom={zoomLevel}
-            >
-              <LocationPin
-                lat={location.lat}
-                lng={location.lng}
-                text={location.address}
-              />
-            </GoogleMapReact>
+          <div>
+            <div className={styles.image}>
+              <GoogleMapReact
+                bootstrapURLKeys={{
+                  key: "AIzaSyDWAjDA-Ju4AA3jZIEU9Rd7XRqpO1V4VU8",
+                }}
+                defaultCenter={location}
+                defaultZoom={zoomLevel}
+              >
+                <LocationPin
+                  lat={location.lat}
+                  lng={location.lng}
+                  text={location.address}
+                />
+              </GoogleMapReact>
+            </div>
+          </div>
+          <div>
+            <p>A-102 ISocn heigts, Gotri road vadodara Lorem </p>
           </div>
         </div>
 
