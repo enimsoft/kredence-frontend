@@ -228,13 +228,7 @@ function Altapure() {
           </h5>
 
           {data.map((item, index) => {
-            if (item.glow)
-              return (
-                <p className={styles.contentGlow} key={index}>
-                  {item.text}
-                </p>
-              );
-            else
+            if (item.glow || !search.length)
               return (
                 <p className={styles.content} key={index}>
                   {item.text}
@@ -251,14 +245,7 @@ function Altapure() {
             <h5 style={{ fontWeight: "800" }}> Pack Size</h5>
           </div>
           {data.map((item, index) => {
-            if (item.glow)
-              return (
-                <div className={styles.productItem} key={index}>
-                  <p className={styles.contentGlow}>{item.text}</p>
-                  <p className={styles.contentGlow}> {item.value}</p>
-                </div>
-              );
-            else
+            if (item.glow || !search.length)
               return (
                 <div className={styles.productItem} key={index}>
                   <p className={styles.content}>{item.text}</p>

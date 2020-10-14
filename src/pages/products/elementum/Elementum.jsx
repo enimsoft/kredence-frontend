@@ -132,13 +132,7 @@ function Elementum() {
             dispensing)
           </p>
           {content.map((item, index) => {
-            if (item.glow)
-              return (
-                <p className={styles.contentGlow} key={index}>
-                  {item.text}
-                </p>
-              );
-            else
+            if (item.glow || !search.length)
               return (
                 <p className={styles.content} key={index}>
                   {item.text}

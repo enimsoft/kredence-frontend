@@ -1,9 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Downloads.module.css";
 import Header from "../../Components/header/Header";
+import SearchIcon from "@material-ui/icons/Search";
+import Button from "@material-ui/core/Button";
+import axios from "axios";
 
-const filename = "test.pdf";
 function TrumpCard() {
+  const [productName, setProductName] = useState();
+  const [buttonName, setButtonName] = useState();
+  const [buttonURL, setButtonURL] = useState();
+
+  const handleChange = (e) => {
+    setProductName(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!productName) return;
+
+    const form = new FormData();
+
+    form.append("type", "Trump");
+    form.append("productName", productName);
+
+    axios
+      .post("http://localhost:8080/file/get-document", form)
+      .then((res) => {
+        if (res.status !== 200) throw new Error();
+
+        setButtonName(res.data.fileName);
+        setButtonURL(res.data.fileLink);
+      })
+      .catch((err) => {
+        if (err.response) {
+          alert(err.response.data.Message);
+        }
+      });
+  };
+
   return (
     <div className={styles.t}>
       <Header />
@@ -21,22 +55,37 @@ function TrumpCard() {
         <div>
           <input
             type="text"
-            placeholder="Batch Number"
+            value={productName}
+            placeholder="Product Name"
+            onChange={handleChange}
             className={styles.textfield}
           />
+          <SearchIcon
+            style={{ color: "#2699fb", position: "absolute" }}
+            onClick={handleSubmit}
+          />
           <br />
-          <button className="styles.pbutton" type="button">
+          <Button
+            variant="contained"
+            disabled={buttonName ? false : true}
+            href={buttonURL}
+            style={{
+              background: "#358ed3",
+              color: "white",
+              padding: "9px 16px",
+            }}
+          >
             <i
               class="fa fa-arrow-down"
               aria-hidden="true"
               style={{ marginRight: "0.5em" }}
             ></i>
-            {filename}
-          </button>
+            {buttonName ? buttonName : "Select File"}
+          </Button>
           <p className={styles.para}>
             The product and lot number are found on the product label, as
             indicated in the diagram on the right. If your search returns no
-            results, please contact us for further assistance.{" "}
+            results, please contact us for further assistance.
           </p>
         </div>
       </div>
