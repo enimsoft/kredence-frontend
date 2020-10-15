@@ -24,7 +24,7 @@ function Coa(props) {
 
     const form = new FormData();
 
-    form.append("type", "Trump");
+    form.append("type", "COA");
     form.append("productNumber", productNumber);
     form.append("batchNumber", batchNumber);
 
