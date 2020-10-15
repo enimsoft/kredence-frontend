@@ -25,7 +25,7 @@ function TrumpCard() {
     form.append("productName", productName);
 
     axios
-      .post("https://kredence-upload.herokuapp.com/file/get-document", form)
+      .post("https://apikredence.herokuapp.com/file/get-document", form)
       .then((res) => {
         if (res.status !== 200) throw new Error();
 
