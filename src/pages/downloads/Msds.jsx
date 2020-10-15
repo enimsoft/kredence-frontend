@@ -26,7 +26,7 @@ function Msds() {
     form.append("productName", productName);
 
     axios
-      .post("http://localhost:8080/file/get-document", form)
+      .post("https://kredence-upload.herokuapp.com/file/get-document", form)
       .then((res) => {
         if (res.status !== 200) throw new Error();
 
