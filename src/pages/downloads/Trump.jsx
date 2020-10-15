@@ -9,6 +9,7 @@ function TrumpCard() {
   const [productName, setProductName] = useState();
   const [buttonName, setButtonName] = useState();
   const [buttonURL, setButtonURL] = useState();
+  const [official, setOfficial] = useState();
 
   const handleChange = (e) => {
     setProductName(e.target.value);
@@ -30,6 +31,7 @@ function TrumpCard() {
 
         setButtonName(res.data.fileName);
         setButtonURL(res.data.fileLink);
+        setOfficial(res.data.officialName);
       })
       .catch((err) => {
         if (err.response) {
@@ -82,6 +84,18 @@ function TrumpCard() {
             ></i>
             {buttonName ? buttonName : "Select File"}
           </Button>
+          {official && (
+            <h4
+              style={{
+                fontSize: "20px",
+                marginTop: "1rem",
+                fontFamily: "Roboto",
+                fontWeight: "400",
+              }}
+            >
+              {official}
+            </h4>
+          )}
           <p className={styles.para}>
             The product and lot number are found on the product label, as
             indicated in the diagram on the right. If your search returns no

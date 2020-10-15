@@ -12,6 +12,7 @@ function Coa() {
   const [batchNumber, setBatchNumber] = useState(null);
   const [buttonName, setButtonName] = useState(null);
   const [buttonURL, setButtonURL] = useState();
+  const [official, setOfficial] = useState();
 
   const handleChange = (e) => {
     setProductNumber(e.target.value);
@@ -37,6 +38,7 @@ function Coa() {
 
         setButtonName(res.data.fileName);
         setButtonURL(res.data.fileLink);
+        setOfficial(res.data.officialName);
       })
       .catch((err) => {
         if (err.response) {
@@ -96,6 +98,18 @@ function Coa() {
             ></i>
             {buttonName ? buttonName : "Select File"}
           </Button>
+          {official && (
+            <h4
+              style={{
+                fontSize: "20px",
+                marginTop: "1rem",
+                fontFamily: "Roboto",
+                fontWeight: "400",
+              }}
+            >
+              {official}
+            </h4>
+          )}
           <p className={styles.para}>
             The product and lot number are found on the product label, as
             indicated in the diagram on the right. If your search returns no
