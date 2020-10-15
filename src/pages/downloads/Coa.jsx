@@ -7,12 +7,9 @@ import SearchIcon from "@material-ui/icons/Search";
 import axios from "axios";
 
 const filename = "test.pdf";
-function Coa() {
+function Coa(props) {
   const [productNumber, setProductNumber] = useState();
   const [batchNumber, setBatchNumber] = useState(null);
-  const [buttonName, setButtonName] = useState(null);
-  const [buttonURL, setButtonURL] = useState();
-  const [official, setOfficial] = useState();
 
   const handleChange = (e) => {
     setProductNumber(e.target.value);
@@ -36,9 +33,7 @@ function Coa() {
       .then((res) => {
         if (res.status !== 200) throw new Error();
 
-        setButtonName(res.data.fileName);
-        setButtonURL(res.data.fileLink);
-        setOfficial(res.data.officialName);
+        window.location.assign(res.data.fileLink);
       })
       .catch((err) => {
         if (err.response) {
@@ -75,41 +70,25 @@ function Coa() {
             placeholder="Batch Number"
             className={styles.textfield}
           />
-          <SearchIcon
-            style={{ color: "#2699fb", position: "absolute" }}
-            onClick={handleSubmit}
-          />
           <br />
 
           <Button
             variant="contained"
-            disabled={buttonName ? false : true}
-            href={buttonURL}
             style={{
               background: "#358ed3",
               color: "white",
               padding: "9px 16px",
             }}
+            onClick={handleSubmit}
           >
             <i
               class="fa fa-arrow-down"
               aria-hidden="true"
               style={{ marginRight: "0.5em" }}
             ></i>
-            {buttonName ? buttonName : "Select File"}
+            Download File
           </Button>
-          {official && (
-            <h4
-              style={{
-                fontSize: "20px",
-                marginTop: "1rem",
-                fontFamily: "Roboto",
-                fontWeight: "400",
-              }}
-            >
-              {official}
-            </h4>
-          )}
+
           <p className={styles.para}>
             The product and lot number are found on the product label, as
             indicated in the diagram on the right. If your search returns no
