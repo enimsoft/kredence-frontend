@@ -9,7 +9,7 @@ function Header() {
   const SearchLinks = [
     { text: "COAs", link: "/downloads/coa" },
     { text: "MSDs", link: "/downloads/msds" },
-    { text: "Trump Card", link: "/downloads/trumpcard" },
+    { text: "TREM Card", link: "/downloads/trumpcard" },
     { text: "Honeywell", link: "/products/honeywell" },
     { text: "CPC", link: "/products/cpc" },
     { text: "Elementum", link: "/products/elementum" },
@@ -113,7 +113,7 @@ function Header() {
                 to="/downloads/trumpcard"
                 className={styles.dropitems}
               >
-                Trump Card
+                TREM Card
               </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link

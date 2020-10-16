@@ -18,7 +18,7 @@ function TrumpCard() {
 
     const form = new FormData();
 
-    form.append("type", "Trump");
+    form.append("type", "TREM");
     form.append("productName", productName);
 
     axios
@@ -37,7 +37,7 @@ function TrumpCard() {
   return (
     <div className={styles.t}>
       <Header />
-      <h2 className={styles.heading}>Trump Card</h2>
+      <h2 className={styles.heading}>TREM Card</h2>
       <hr className={styles.hr1} />
       <div className={styles.dpage}>
         <div className={styles.dimage}>
