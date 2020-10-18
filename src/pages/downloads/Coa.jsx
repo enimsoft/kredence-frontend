@@ -8,7 +8,7 @@ import axios from "axios";
 
 const filename = "test.pdf";
 function Coa(props) {
-  const [productNumber, setProductNumber] = useState();
+  const [productNumber, setProductNumber] = useState(null);
   const [batchNumber, setBatchNumber] = useState(null);
 
   const handleChange = (e) => {
@@ -25,7 +25,7 @@ function Coa(props) {
     const form = new FormData();
 
     form.append("type", "COA");
-    form.append("productNumber", productNumber);
+    form.append("productName", productNumber);
     form.append("batchNumber", batchNumber);
 
     axios
@@ -59,12 +59,12 @@ function Coa(props) {
             type="text"
             value={productNumber}
             onChange={handleChange}
-            placeholder="Product Number"
+            placeholder="Product Name"
             className={styles.textfield}
           />
           <br />
           <input
-            type="text"
+            type="number"
             value={batchNumber}
             onChange={handleBatchNumber}
             placeholder="Batch Number"
@@ -92,7 +92,7 @@ function Coa(props) {
           <p className={styles.para}>
             The product and lot number are found on the product label, as
             indicated in the diagram on the right. If your search returns no
-            results, please contact us for further assistance.{" "}
+            results, please contact us for further assistance.
           </p>
         </div>
       </div>
