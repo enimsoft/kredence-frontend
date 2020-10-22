@@ -86,7 +86,7 @@ function Header() {
               {/*
           <NavDropdown.Divider /> */}
             </NavDropdown>
-            <Nav.Link className={styles.navitems} href="#link">
+            <Nav.Link className={styles.navitems} href="/qualityassurance">
               Quality Assurance
             </Nav.Link>
             <NavDropdown

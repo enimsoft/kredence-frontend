@@ -64,7 +64,7 @@ function Coa(props) {
           />
           <br />
           <input
-            type="number"
+            type="text"
             value={batchNumber}
             onChange={handleBatchNumber}
             placeholder="Batch Number"

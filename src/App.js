@@ -7,6 +7,8 @@ import Coa from "./pages/downloads/Coa";
 import Msds from "./pages/downloads/Msds";
 import TrumpCard from "./pages/downloads/Trump";
 
+import Quality from "./pages/quality/quality";
+
 import Honeywell from "./pages/products/honeywell/Honeywell";
 import Elementum from "./pages/products/elementum/Elementum";
 import Altapure from "./pages/products/altapure/Altapure";
@@ -22,6 +24,8 @@ function App() {
         <Switch>
           <Route exact path={["/", "/home"]} component={Home} />
           <Route exact path="/contactus" component={Contact} />
+
+          <Route exact path="/qualityassurance" component={Quality} />
 
           <Route exact path="/downloads/coa" component={Coa} />
           <Route exact path="/downloads/msds" component={Msds} />
