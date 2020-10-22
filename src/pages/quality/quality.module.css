@@ -25,6 +25,7 @@
   border-radius: 10px;
   box-shadow: 0 0 20px 0 #bfbfbf;
   padding: 36px;
+  padding-bottom: 0;
   align-items: center;
 }
 
@@ -36,7 +37,7 @@
 .contentDark {
   padding: 2rem 10%;
   border: 3px solid #bdbdbd;
-  background: #f2f2f2;
+  background: #ceea9a33;
 }
 
 .contentDark h1 {

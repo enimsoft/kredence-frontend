@@ -24,7 +24,7 @@ function Home() {
 
         <div className={styles.products}>
           <div>
-            <a as={Link} to="/products/honeywell">
+            <a href="/products/honeywell">
               <img
                 className={styles.pimage}
                 src={require("../../assets/products/honeywell/honeywell.png")}
@@ -34,13 +34,13 @@ function Home() {
           </div>
 
           <div>
-            <a>
+            <a href="/products/cpc">
               <img className={styles.pimage} src={cpc} alt="" />
             </a>
           </div>
 
           <div>
-            <a>
+            <a href="/products/elementum">
               <img
                 className={styles.pimage}
                 src={require("../../assets/products/elementum/elment.png")}
@@ -50,7 +50,7 @@ function Home() {
           </div>
 
           <div>
-            <a>
+            <a href="/products/altapure">
               <img
                 className={styles.pimage}
                 src={require("../../assets/products/altapure/alta.png")}
