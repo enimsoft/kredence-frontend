@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Contact.module.css";
 import Header from "../../Components/header/Header";
 import GoogleMapReact from "google-map-react";
 
 import LocationOnIcon from "@material-ui/icons/LocationOn";
+
+import axios from "axios";
 
 const LocationPin = ({ text }) => (
   <div className={styles.pin}>
@@ -13,13 +15,42 @@ const LocationPin = ({ text }) => (
 );
 
 function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   const location = {
     address: "1600 Amphitheatre Parkway, Mountain View, california.",
-    lat: 37.42216,
-    lng: -122.08427,
+    lat: 22.318451,
+    lng: 73.169398,
   };
 
   const zoomLevel = 17;
+
+  const handleSubmit = () => {
+    if (!name || !email || !message) {
+      alert("All Fields Are Required !");
+      return;
+    }
+
+    const data = {
+      name,
+      email,
+      message,
+    };
+
+    axios
+      .post("http://localhost:8080/file/contactUs", data)
+      .then((res) => {
+        alert("Your Form has been submitted successfylly !");
+        setName("");
+        setEmail("");
+        setMessage("");
+      })
+      .catch((err) => {
+        alert("Error submitting the response");
+      });
+  };
 
   return (
     <div className={styles.c}>
@@ -33,7 +64,7 @@ function Contact() {
             <div className={styles.image}>
               <GoogleMapReact
                 bootstrapURLKeys={{
-                  key: "AIzaSyDWAjDA-Ju4AA3jZIEU9Rd7XRqpO1V4VU8",
+                  key: "AIzaSyCZW5hs5IfSLxFIMyEIqrKsclSnLRxOxWg",
                 }}
                 defaultCenter={location}
                 defaultZoom={zoomLevel}
@@ -53,20 +84,35 @@ function Contact() {
 
         <div className={styles.form}>
           <i className="fa fa-user usericon" aria-hidden="true" />
-          <input type="text" placeholder="Name" className={styles.textfield} />
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Name"
+            className={styles.textfield}
+          />
           <br />
           <i className="fa fa-user usericon" aria-hidden="true" />
           <input
             type="email"
             placeholder="Email"
             className={styles.textfield}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <textarea
             id="contact"
             placeholder="Your Message...."
             className={styles.textarea}
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
           />
-          <button className="pbutton" type="button">
+          <button
+            className="pbutton"
+            style={{ cursor: "pointer" }}
+            type="button"
+            onClick={handleSubmit}
+          >
             Submit
           </button>
         </div>
