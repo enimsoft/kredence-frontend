@@ -1,65 +1,61 @@
-.searchNcatalogue{
-    margin-top: 7%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    padding:0% 5%;
-    grid-column-gap: 1.5em;
-
+.searchNcatalogue {
+  margin-top: 7%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0% 5%;
+  grid-column-gap: 1.5em;
 }
 
-.textfield{
-    border-top-style: hidden;
-    border-right-style: hidden;
-    border-left-style: hidden;
-    border-bottom-style: solid;
-    border-color: #DDDDDD;
-
+.textfield {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid;
+  border-color: #dddddd;
 }
 
-.button{
-    background-color: #358ED3;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 0.9em 2em;
-    box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.10);
-    width: 100%;
+.button {
+  background-color: #358ed3;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 0.8rem 0.5rem;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
-.heading{
-    color: black;
-    font-size: 24px;
-    margin-top: 5%;
+.heading {
+  color: black;
+  font-size: 24px;
+  margin-top: 5%;
 }
 
-.head{
-    padding: 0% 5%;
+.head {
+  padding: 0% 5%;
 }
 
-.link{
-    font-size: 8px;
-    color: black;
-
+.link {
+  font-size: 8px;
+  color: black;
 }
-
 
 @media only screen and (min-width: 900px) {
+  .head {
+    margin: 0 10%;
+    padding: 0px;
+  }
 
-    .head{
-        margin: 0 10%;   
-        padding: 0px ;
-    }
+  .searchNcatalogue {
+    margin: 3em 10%;
+    padding: 0px;
+  }
 
-    .searchNcatalogue{
-        margin: 3em 10%;
-        padding: 0px
-    }
-
-    .button{
-        width: 100%;
-        grid-column-end: 4;
-    }
-    .link{
-        font-size: 12px;
-    }
+  .button {
+    width: 100%;
+    padding: 0.9em 2em;
+    grid-column-end: 4;
+  }
+  .link {
+    font-size: 12px;
+  }
 }

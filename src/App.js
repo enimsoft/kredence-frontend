@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 import Home from "./pages/home/Home";
 import Contact from "./pages/contact/Contact";
 
@@ -20,6 +22,11 @@ import "./App.css";
 function App() {
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Kredence-Material</title>
+      </Helmet>
+
       <Router>
         <Switch>
           <Route exact path={["/", "/home"]} component={Home} />

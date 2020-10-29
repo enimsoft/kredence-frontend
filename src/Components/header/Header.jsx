@@ -127,15 +127,7 @@ function Header() {
           </Nav>
           <Form inline>
             <Dropdown>
-              <Dropdown.Toggle
-                style={{
-                  background: "white",
-                  marginLeft: "1em",
-                  border: "0",
-                  width: "100%",
-                  padding: "0",
-                }}
-              >
+              <Dropdown.Toggle className={styles.box}>
                 <input
                   type="text"
                   value={search}

@@ -57,7 +57,7 @@
 .other {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0% 5%;
+  padding: 5%;
   grid-gap: 3em;
 }
 

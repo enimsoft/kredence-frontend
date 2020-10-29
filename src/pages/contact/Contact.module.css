@@ -48,7 +48,7 @@
 .image {
   margin: auto;
   height: 30vh;
-  width: 70vh;
+  width: 51vh;
 }
 
 .pin {
@@ -128,5 +128,6 @@
 
   .image {
     height: 35vh;
+    width: 70vh;
   }
 }
