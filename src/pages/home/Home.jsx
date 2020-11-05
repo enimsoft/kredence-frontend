@@ -77,10 +77,13 @@ function Home() {
             alt=""
           />
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Reprehenderit, voluptatum laudantium? Ipsum obcaecati magni earum,
-            dolorem eius, autem tenetur recusandae iusto vero vitae at odit
-            quibusdam tempora similique fugiat dicta.
+            Having more than 20 years of experience in Performance Chemicals
+            Industry and having worked with Glaxo, Ranbaxy & Avantor Performance
+            Materials India Limited. He worked at various sales positions and
+            was Business Head-Lab Product at Avantor, his last assignment.
+            Awarded M.Phil (Organic Chemistry) degree from Kurukshetra
+            University . Bharat loves to explore new challenges and always
+            having an customer focus approach.
           </p>
         </div>
 
@@ -91,10 +94,12 @@ function Home() {
             alt=""
           />
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Reprehenderit, voluptatum laudantium? Ipsum obcaecati magni earum,
-            dolorem eius, autem tenetur recusandae iusto vero vitae at odit
-            quibusdam tempora similique fugiat dicta.
+            Having more than 23 years experience in various functions related to
+            Quality Assurance, Quality Control, Production and Technical
+            Services in performance chemical industry. A holder of Master degree
+            in Chemistry from Kanpur University. He always believe to provide
+            best quality product to customers through quality system and
+            process.
           </p>
         </div>
       </div>

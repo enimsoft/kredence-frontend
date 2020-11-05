@@ -1,166 +1,157 @@
 @import url("https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap");
 
-.headings{
-    margin-top: 2em;
-    padding: 0% 5%;
+.headings {
+  margin-top: 2em;
+  padding: 0% 5%;
 }
 
-.eimage{
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.38);
-    margin-bottom: 1em
+.eimage {
+  max-width: 80%;
+  border-radius: 20px;
+  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.38);
+  margin-bottom: 1em;
 }
-.g{
-    order: 3;
+.g {
+  order: 3;
 }
-.eimage2{
-    max-width: 100%;
-    border-radius: 20px;
-    box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.38);
-    margin-bottom: 1em;
+.eimage2 {
+  max-width: 80%;
+  border-radius: 20px;
+  box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.38);
+  margin-bottom: 1em;
 }
 
-.products{
-    padding: 3% 5%;
-    display: grid;
+.products {
+  padding: 3% 5%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3em;
+  margin-bottom: 3em;
+}
+
+.pimage {
+  height: 30px;
+}
+
+.exp {
+  background-color: #ceea9a33;
+  padding: 3% 5%;
+  margin-bottom: 3em;
+}
+
+.diff {
+  display: grid;
+  padding: 0% 5%;
+  justify-content: center;
+  text-align: center;
+}
+.diffhead {
+  color: #000000;
+  font-weight: bold;
+  justify-self: center;
+}
+.difftext {
+  font-weight: 5;
+  justify-self: center;
+  font-size: 10px;
+  margin-bottom: 5em;
+}
+.expcard {
+  border-radius: 25px;
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+}
+
+.section1 {
+  margin: 0px;
+}
+
+h2 {
+  font-size: 24px;
+  /* margin-left: 10px; */
+}
+
+hr {
+  /* margin: 10px; */
+}
+
+img {
+  /* margin-bottom: 1em; */
+  justify-self: center;
+}
+.dimg {
+  width: 7em;
+  margin-bottom: 0px;
+
+  /* justify-self: center; */
+}
+
+p {
+  margin-bottom: 2em;
+  color: #000000;
+}
+
+FormControl {
+  border: 20px;
+}
+
+@media only screen and (min-width: 900px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto 0 auto;
     justify-content: center;
+    margin-top: 5em;
+    width: 80%;
+    height: 30vh;
+    padding: 0px;
+  }
+
+  .headings {
+    margin: 0 auto 0 auto;
+    width: 80%;
+    margin-top: 5em;
+    padding: 0px;
+  }
+
+  .expcard {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 3em;
-    margin-bottom: 3em;
+    margin: 0 auto 0 auto;
+    width: 80%;
+    grid-gap: 5em;
+    margin-top: 3em;
+  }
+
+  .pimage {
+    height: 3em;
+  }
+
+  .eimage {
+    height: 382 px;
+    width: 573 px;
+  }
+
+  .eimage2 {
+    height: 382 px;
+    width: 573 px;
+    order: 2;
+  }
+
+  .diffhead {
+    padding: 0px;
+  }
+
+  .diff {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto 0 auto;
+    width: 80%;
+    grid-column-gap: 5em;
+    margin-top: 5em;
+    padding: 0px;
+  }
+
+  .exp {
+    padding: 2em 0px;
+  }
 }
-
-.pimage{
-    height: 30px;
-    
-}
-
-.exp{
-    background-color: #CEEA9A33 ;
-    padding: 3% 5%;
-    margin-bottom: 3em;  
-}
-
-.diff{
-    display: grid;
-    padding: 0% 5%;
-    justify-content: center;
-    text-align: center;
-}
-.diffhead{
-    color: #000000;
-    font-weight: bold;
-    justify-self: center;
-}
-.difftext{
-    font-weight: 5;
-    justify-self: center;
-    font-size: 10px;
-    margin-bottom: 5em;
-}
-.expcard{
-    border-radius: 25px;
-    display: grid;
-    grid-template-rows: repeat(1,1fr);
-    
-}
-
-.section1{
-
-    margin: 0px;
-}
-
-h2{
-    font-size: 24px;  
-    /* margin-left: 10px; */
-}
-
-hr{
-    /* margin: 10px; */
-}
-
-img{
-    /* margin-bottom: 1em; */
-    justify-self: center;
-    
-}
-.dimg{
-    width:7em;
-    margin-bottom: 0px;
-    
-    /* justify-self: center; */
-}
-
-p{
-    margin-bottom: 2em;
-    color: #000000;
-}
-
-FormControl{
-
-    border: 20px;
-}
-
-@media only screen and (min-width: 900px){
-
-    .products{
-        grid-template-columns: repeat(4,1fr );
-        margin: 0 auto 0 auto;
-        justify-content: center;
-        margin-top: 5em;
-        width: 80%;
-        height: 30vh;
-        padding: 0px;
-    }
-
-    .headings{
-        margin: 0 auto 0 auto;
-        width: 80%;
-        margin-top: 5em;
-        padding: 0px;
-    }
-
-    .expcard{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin: 0 auto 0 auto;
-        width: 80%;
-        grid-gap: 5em;
-        margin-top: 3em;
-    }
-
-    .pimage{
-        height: 3em;
-        
-    }
-
-    .eimage{
-       height: 382 px;
-       width: 573 px;
-    }
-
-    .eimage2{
-        height: 382 px;
-        width: 573 px;
-        order: 2;
-     }
-
-    .diffhead{
-        padding: 0px;
-    }
-
-    .diff{
-        grid-template-columns: repeat(3,1fr);
-        margin: 0 auto 0 auto;
-        width: 80%;
-        grid-column-gap: 5em;
-        margin-top: 5em;
-        padding: 0px;
-    }
-
-    .exp{
-        padding: 2em 0px;
-    }
-
-}
- 
