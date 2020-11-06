@@ -21,7 +21,7 @@ function Contact() {
 
   const location = {
     address:
-      "301 c-square sarabhai compound near ganda circle vadodara gujaray 39007",
+      "301 c-square sarabhai compound near ganda circle vadodara Gujarat 39007",
     lat: 22.318451,
     lng: 73.169398,
   };
@@ -80,7 +80,7 @@ function Contact() {
           </div>
           <div>
             <p>
-              301 c-square sarabhai compound near ganda circle vadodara gujaray
+              301 c-square sarabhai compound near ganda circle vadodara Gujarat
               39007
             </p>
           </div>
