@@ -117,7 +117,7 @@ function Home() {
 
           <div className={styles.expcard}>
             <img
-              className={styles.eimage}
+              className={styles.eimage2}
               src={require("../../assets/p1.jpeg")}
               alt=""
             />

@@ -8,6 +8,10 @@
   grid-column-gap: 2em;
 }
 
+.footer a:hover {
+  text-decoration: underline white;
+}
+
 .footer p {
   font-size: 0.8rem;
 }

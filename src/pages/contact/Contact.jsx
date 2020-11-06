@@ -20,7 +20,8 @@ function Contact() {
   const [message, setMessage] = useState("");
 
   const location = {
-    address: "1600 Amphitheatre Parkway, Mountain View, california.",
+    address:
+      "301 c-square sarabhai compound near ganda circle vadodara gujaray 39007",
     lat: 22.318451,
     lng: 73.169398,
   };
@@ -78,7 +79,10 @@ function Contact() {
             </div>
           </div>
           <div>
-            <p>A-102 ISocn heigts, Gotri road vadodara Lorem </p>
+            <p>
+              301 c-square sarabhai compound near ganda circle vadodara gujaray
+              39007
+            </p>
           </div>
         </div>
 

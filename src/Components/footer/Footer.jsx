@@ -27,14 +27,16 @@ function Footer() {
       </div>
 
       <div className={styles.footerblock}>
-        <p className={styles.footerhead}>Made by:</p>
-        <img
-          src={require("../../assets/logo512.png")}
-          className={styles.enimlogo}
-          alt=""
-        />
-        <p className={styles.footertext}>Enim AI</p>
-        <p className={styles.footertext}>© Kredence Materials 2020</p>
+        <a href="https//enim.ai.com/">
+          <p className={styles.footerhead}>Made by:</p>
+          <img
+            src={require("../../assets/logo512.png")}
+            className={styles.enimlogo}
+            alt=""
+          />
+          <p className={styles.footertext}>Enim AI</p>
+          <p className={styles.footertext}>© Kredence Materials 2020</p>
+        </a>
       </div>
     </div>
   );
