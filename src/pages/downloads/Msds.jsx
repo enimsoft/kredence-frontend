@@ -54,7 +54,7 @@ function Msds() {
           <input
             type="text"
             value={productName}
-            placeholder="Product Name"
+            placeholder="Product Code"
             onChange={handleChange}
             className={styles.textfield}
           />

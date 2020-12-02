@@ -59,7 +59,7 @@ function Coa(props) {
             type="text"
             value={productNumber}
             onChange={handleChange}
-            placeholder="Product Name"
+            placeholder="Product Code"
             className={styles.textfield}
           />
           <br />
