@@ -72,7 +72,7 @@ function Home() {
           <div className={styles.expcard}>
             <img
               className={styles.eimage}
-              src={require("../../assets/p1.jpeg")}
+              src={require("../../assets/bharat_1.jpeg")}
               alt=""
             />
             <div className={styles.cont}>
@@ -83,7 +83,7 @@ function Home() {
                   margin: "0 0 1rem",
                 }}
               >
-                Mr Bharat Bhatnagar
+                Bharat Bhatnagar
               </h2>
               <p>
                 He has more than 20 years of experience in Performance Chemicals
@@ -118,7 +118,7 @@ function Home() {
           <div className={styles.expcard}>
             <img
               className={styles.eimage2}
-              src={require("../../assets/p1.jpeg")}
+              src={require("../../assets/sandeep_1.jpeg")}
               alt=""
             />
             <div className={styles.cont}>
@@ -129,7 +129,7 @@ function Home() {
                   margin: "0 0 1rem",
                 }}
               >
-                Mr Snadeep Mathur
+                Sandeep Mathur
               </h2>
               <p>
                 He has more than 23 years experience in various functions
