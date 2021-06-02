@@ -40,7 +40,7 @@ function Header() {
       <Navbar className="header" expand="lg">
         <Navbar.Brand as={Link} to="/" href="#home">
           <img
-            src={require("../../assets/logo.png")}
+            src={require("../../assets/new_logo.jpg")}
             className={styles.navlogo}
             alt=""
           />
