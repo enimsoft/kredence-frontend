@@ -1,0 +1,10 @@
+runtime: nodejs16
+2handlers:
+3  # Serve all static files with url ending with a file extension
+4  - url: /(.*\..+)$
+5    static_files: build/\1
+6    upload: build/(.*\..+)$
+7  # Catch all handler to index.html
+8  - url: /.*
+9    static_files: build/index.html
+10    upload: build/index.html
