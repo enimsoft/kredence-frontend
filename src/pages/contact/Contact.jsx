@@ -21,7 +21,7 @@ function Contact() {
 
   const location = {
     address:
-      "301 c-square sarabhai compound near ganda circle vadodara Gujarat 39007",
+      "TF-301, Block-C, C-square, Sarabhai Campus, Near Genda Circle, Subhanpura, Vadodara, Gujarat, India 390023",
     lat: 22.318451,
     lng: 73.169398,
   };
